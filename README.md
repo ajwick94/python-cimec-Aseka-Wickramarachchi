@@ -5,6 +5,7 @@ This project simulates sound localization cues using Interaural Time Difference 
 This is a simple experiment that mimics auditory perception research methods used to measure accuracy in sound localisation and spatial hearing. The idea behind this project was to primarily familiarise myself in building a simple localisation experiment using Python while being able to combing knowdledge from psychoacoustics and digital signal processing.
 
 🧠 Background
+
 ITD (Interaural Time Difference):
 Time difference in arrival of a sound at each ear, strongest cue for localization at low frequencies.
 
