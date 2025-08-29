@@ -114,15 +114,20 @@ class generate_ITD:
             
             stereo_signal = np.column_stack([left,right])
             
-            #Apply peak normalisation in order to avoid clipping and preserve cues.
+            #Apply peak normalisation in order to avoid clipping and preserve ILD cues.
             peak_norm = np.max(np.abs(stereo_signal))
             if peak_norm > 1.0:
                 stereo_signal = stereo_signal / peak_norm
             return stereo_signal
         
     
-    #Generate a simple test tone, play and save the sound as a wavfile.
+    #Generate a simple test tone, play and save the sound stimuli as a wavfile.
     def play_test_tone (self, freq = 750, duration = 0.2):
+        
+        """For our JND experiments we require a controlled sound stimulus. 
+        First we Generate a sine wave of chosen frequency and duration. 
+        Then apply a 10 ms cosine ramp (fade-in/out) to avoid clicks in the tone generated. 
+        Return as an array."""
         
         n = int(self.sample_rate * duration)
         t = np.arange(n) / self.sample_rate
