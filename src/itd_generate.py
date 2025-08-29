@@ -35,7 +35,7 @@ class generate_ITD:
         
         """
         theta = np.radians (angle_deg)
-        theta_c = np.clip(theta, -np.pi/2, np.pi/2)
+        theta_c = np.clip(theta, -np.pi/2, np.pi/2) #Here theta is clamped since we are only concerned about localisation in the frontal hemifield -90 to +90. This prevents sounds appearing from behind the head.
         it_d = (self.avg_head_r / self.speed_of_sound) * (theta_c + np.sin(theta_c)) #calculate the ITD
         return float(it_d)
     
@@ -68,7 +68,7 @@ class generate_ITD:
         t = np.arange(n)
         t_src = t - sample_shift
         
-        y = np.interp(t_src, t, x, left=0.0, right =0.0)
+        y = np.interp(t_src, t, x, left=0.0, right =0.0) #linear interpolation allows us to prevent the signal from having warps or artifacts while preserving the signal length.
         return y
     
     def apply_itd(self, mono_signal, angle_deg, use_ild = True):
@@ -134,7 +134,7 @@ class generate_ITD:
         t = np.arange(n) / self.sample_rate
         t_tone = np.sin(2* np.pi * freq * t )
         
-        #Here we are pplying an on/off ramp of about 10ms
+        #Here we apply an on/off ramp of about 10ms
         ramp_x = 0.01
         ramp_y = max(1, int(self.sample_rate * ramp_x))
         window = np.ones(n)
@@ -160,7 +160,7 @@ class generate_ITD:
         x = np.asarray(stereo_signal, dtype=float)
         peak_norm = np.max(np.abs(x))
         if peak_norm > 0:
-            x = x / peak_norm * 0.95 #here we multiply the normalisation by 0.95 to leave "headroom". This avoids the loudest parts of the sound being too harsh (distorted or clipping) while maintaing the signal at a safe level.
+            x = x / peak_norm * 0.95 #here we have multiplied the normalisation by 0.95 to leave "headroom". This avoids the loudest parts of the sound being too harsh (distorted or clipping) while maintaining the signal at a safe level.
         wavfile.write(filename, self.sample_rate, (x * 32767).astype(np.int16))
         
         
