@@ -7,13 +7,11 @@ from itd_generate import generate_ITD
 class jnd_experiment:
     
     """
-    Just Noticeable Difference experiments using ITDs
-    are conducted to determine the smallest detectable changes in the 
-    time difference between sounds reaching the two ears, 
+    Just Noticeable Difference experiments are conducted to determine the smallest detectable changes in the 
+    time difference between sounds reaching the two ears (this is done by itd_generate.py) 
     which helps us understand the precision of the auditory system's 
     sound localization ability and how this sensitivity changes with 
-    factors such as frequency, enabling the design of 
-    hearing aids and analysis of spatial hearing.
+    factors such as frequency, which enables us to analyse spatial hearing/sound localisation abilities.
     
     """ 
     
