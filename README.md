@@ -42,7 +42,7 @@ pip install numpy scipy matplotlib sounddevice
 
 ⚠️ Note:
 A working sound output device (headphones are much recommended 🎧) is required.
-sounddevice may require additional backend libraries depending on your OS.
+
 
 
 
