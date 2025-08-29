@@ -23,10 +23,6 @@ Logs responses, tracks reversals, and plots localization performance.
 
 🛠️ Installation
 
-Clone the repo:
-git clone https://github.com/<ajwick94>/<Basic-ITD-Localisation-Project>.git
-cd <Basic-ITD-Localisation-Project>
-
 Install dependencies:
 pip install numpy scipy matplotlib sounddevice
 
