@@ -35,7 +35,7 @@ class jnd_experiment:
         self.history_angle = []
         self.history_correct = []
         
-        #plotting performance
+        #plotting performance in each trial
         plt.ion()
         self.fig, self.ax = plt.subplots(figsize=(8,4))
         self.line, = self.ax.plot([],[],'-o', label = 'angle mag in deg')
@@ -72,7 +72,7 @@ class jnd_experiment:
         time.sleep(0.2)
         
         
-        #get responses 
+        #Get responses from the participant 
         pp_response = input (" Which sound did you perceive as further to your left? 1 = first 2 = second: ").strip()
         if pp_response not in ["1", '2']:
             print("Invalid Response")
@@ -81,17 +81,17 @@ class jnd_experiment:
             is_correct = (pp_response == correct_response)
             
         
-        #Updating Staricase
+        #Updating the Adaptive Staricase
         if is_correct:
             self.correct_streak += 1
             if self.correct_streak >=2:
                 self.adjust_angle (difficulty = False) 
                 
-        #log of angles
+        #Logging of the history of target angles and correct responses
         self.history_angle.append(target_angle)
         self.history_correct.append(is_correct)
         
-        #plot updating
+        #Update the plot
         self.update_plot()
         
         return is_correct, target_angle
@@ -106,7 +106,7 @@ class jnd_experiment:
             self.angle = min(self.max_angle, self.angle * 1.25)
             new_direction = 'up'
         
-    #count the change of directions
+    #Count the change of directions
         if self.last_direction and new_direction != self.last_direction:
             self.reversals += 1
         self.last_direction = new_direction
