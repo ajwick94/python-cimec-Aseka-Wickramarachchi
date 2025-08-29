@@ -21,4 +21,17 @@ Task: identify which sound was further to the left.
 Uses an adaptive staircase procedure to adjust difficulty.
 Logs responses, tracks reversals, and plots localization performance.
 
+🛠️ Installation
+
+Clone the repo:
+git clone https://github.com/<ajwick94>/<Basic-ITD-Localisation-Project>.git
+cd <Basic-ITD-Localisation-Project>
+
+Install dependencies:
+pip install numpy scipy matplotlib sounddevice
+
+⚠️ Note:
+A working sound output device (headphones are much recommended 🎧) is required.
+sounddevice may require additional backend libraries depending on your OS.
+
 
