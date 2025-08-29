@@ -4,6 +4,8 @@ This is a simple experiment that mimics auditory perception research methods use
 
 🧠 Background
 
+<img width="850" height="352" alt="Image" src="https://github.com/user-attachments/assets/5475cac6-a1d3-4701-9abf-598dbb6f1309" />
+
 For normal-hearing listeners (NH), the ability of sound localisation is dependent on binaural cues, such as interaural time differences (ITDs; the difference in arrival timing of the sound signal at each ear) and interaural level differences (ILDs; the difference between the sound pressure levels at each ear). 
 
 ITD (Interaural Time Difference):
