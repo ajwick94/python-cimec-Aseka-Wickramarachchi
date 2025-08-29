@@ -25,10 +25,10 @@ class generate_ITD:
         """
         The Woodworth model simplifies interaural time difference (ITD) 
         using a rigid, spherical head approximation where sound travels as a 
-        plane wave. The core formula for the ITD is τ = (r/c) * (θ + sin(θ)), 
+        plane wave. The formula for calculating the ITD is τ = (r/c) * (θ + sin(θ)), 
         where 'r' is the head radius, 'c' is the speed of sound, and 'θ' is 
-        the sound source's azimuth in radians measured from the forward 
-        direction. This equation describes the extra path the sound takes 
+        the sound source's azimuth in radians measured from the frontal hemifield. 
+        This equation describes the extra path the sound takes 
         around the sphere to reach the "occluded" (far) ear, but it needs 
         different forms depending on the source's angular position relative 
         to the ears.  
@@ -36,7 +36,7 @@ class generate_ITD:
         """
         theta = np.radians (angle_deg)
         theta_c = np.clip(theta, -np.pi/2, np.pi/2)
-        it_d = (self.avg_head_r / self.speed_of_sound) * (theta_c + np.sin(theta_c))
+        it_d = (self.avg_head_r / self.speed_of_sound) * (theta_c + np.sin(theta_c)) #calculate the ITD
         return float(it_d)
     
     def simple_ild(self, angle_deg, max_ild =6.0):
@@ -58,7 +58,7 @@ class generate_ITD:
     def fractional_shift (self, x, sample_shift):
         
         """
-        Shift 1D signal by a fractional (possibly negative) number of samples. 
+        1D signal is shifted by a fractional (possibly negative) number of samples. 
         Positive shift = delay (moves signal to the right).
         Uses linear interpolation + zero padding. 
         Preserves length, avoids wraparound.
@@ -125,9 +125,10 @@ class generate_ITD:
     def play_test_tone (self, freq = 750, duration = 0.2):
         
         """For our JND experiments we require a controlled sound stimulus. 
-        First we Generate a sine wave of chosen frequency and duration. 
-        Then apply a 10 ms cosine ramp (fade-in/out) to avoid clicks in the tone generated. 
-        Return as an array."""
+        First we Generate a sine wave of chosen frequency and duration. It is better to use frequencies below 1200 Hz for ITDs.
+        Here we use f = 750 and t = 0.2 seconds.
+        Then a 10 ms cosine ramp is added ( a slight fade-in/out effect) to avoid clicks in the tone generated. 
+        The sound stimulus is returned as an array."""
         
         n = int(self.sample_rate * duration)
         t = np.arange(n) / self.sample_rate
