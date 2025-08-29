@@ -24,16 +24,22 @@ Here I have presented a framework for exploring these psychoacoustic phenomena e
 #generate_ITD.py - class
 
 *Implements a psychoacoustic model (Woodworth’s ITD model) with fractional delay processing to spatialize audio over headphones.
+
 *Simulates ITDs based on average head radius and speed of sound. 
+
 *Applies simple ILDs to mimic natural level differences between ears.
+
 *Can generate and play test tones or save stereo signals as WAV files.
 
 #jnd_experiment.py - class
 
 * Runs a 2-Alternative Forced Choice (2AFC) psychophysics experiment:
     Participant hears two sounds (one centered, one shifted by an angle).
+
 * Task: identify which sound was further to the left.
+
 * Uses an adaptive staircase procedure to adjust the level of difficulty.
+
 * Logs responses, tracks reversals, and plots localization performance of the participant in each trial.
 
 🛠️ **Installation of Dependencies**
