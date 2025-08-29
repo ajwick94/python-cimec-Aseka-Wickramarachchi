@@ -160,7 +160,7 @@ class generate_ITD:
         x = np.asarray(stereo_signal, dtype=float)
         peak_norm = np.max(np.abs(x))
         if peak_norm > 0:
-            x = x / peak_norm * 0.95 #here we multiply the normalisation by 0.95 to leave headroom
+            x = x / peak_norm * 0.95 #here we multiply the normalisation by 0.95 to leave "headroom". This avoids the loudest parts of the sound being too harsh (distorted or clipping) while maintaing the signal at a safe level.
         wavfile.write(filename, self.sample_rate, (x * 32767).astype(np.int16))
         
         
