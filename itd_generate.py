@@ -153,7 +153,7 @@ class generate_ITD:
         peak_norm = np.max(np.abs(x))
         if peak_norm > 0:
             x = x / peak_norm * 0.95 #here we multiply the normalisation by 0.95 to leave headroom
-        wavfile.written(filename, self.sample_rate, (x * 32767).astype(np.int16))
+        wavfile.write(filename, self.sample_rate, (x * 32767).astype(np.int16))
         
         
         
