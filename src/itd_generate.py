@@ -133,7 +133,7 @@ class generate_ITD:
         t = np.arange(n) / self.sample_rate
         t_tone = np.sin(2* np.pi * freq * t )
         
-        #Applying an on/off ramp of 10ms
+        #Here we are pplying an on/off ramp of about 10ms
         ramp_x = 0.01
         ramp_y = max(1, int(self.sample_rate * ramp_x))
         window = np.ones(n)
@@ -144,6 +144,7 @@ class generate_ITD:
         return t_tone * window
     
     def tt_playback (self, stereo_signal):
+        """ Playback of the test tone"""
         
         stereo_signal = np.asarray(stereo_signal, dtype=float)
         
@@ -153,6 +154,7 @@ class generate_ITD:
         
     
     def save_soundfile (self, stereo_signal, filename):
+        """Save the generated tone to the directory"""
         os.makedirs(os.path.dirname(filename) or ".", exist_ok =True)
         x = np.asarray(stereo_signal, dtype=float)
         peak_norm = np.max(np.abs(x))
