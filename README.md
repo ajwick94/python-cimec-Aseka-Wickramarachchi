@@ -2,7 +2,7 @@
 
 This project simulates sound localization cues using Interaural Time Difference (ITD) and a simple Interaural Level Difference (ILD) model. It also implements a Just Noticeable Difference (JND) experiment to measure a listener’s sensitivity to spatial audio cues in the horizontal plane. Using plotting functions, participant performance in each trial is updated.
 
-This is a simple experiment that mimics auditory perception research methods used to measure accuracy in sound localisation and spatial hearing. The idea behind this project was to primarily familiarise myself in building a simple localisation experiment using Python while being able to combing knowdledge from psychoacoustics and digital signal processing.
+This is a simple experiment that mimics auditory perception research methods used to measure accuracy in sound localisation and spatial hearing. The idea behind this project was to primarily familiarise myself in building a simple localisation experiment using Python while being able to combing knowledge from psychoacoustics and digital signal processing.
 
 🧠 Background
 
