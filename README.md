@@ -21,7 +21,7 @@ Here I have presented a framework for exploring these psychoacoustic phenomena e
 
 📖 **Overview of the Code**
 
-# **generate_ITD.py - class**
+# generate_ITD.py - class
 
 * Implements a psychoacoustic model (Woodworth’s ITD model) with fractional delay processing to spatialize audio over headphones.
 
@@ -32,7 +32,7 @@ Here I have presented a framework for exploring these psychoacoustic phenomena e
 * Can generate and play test tones or save stereo signals as WAV files.
 
 
-# **jnd_experiment.py - class**
+# jnd_experiment.py - class
 
 * Use this script to run the 2-Alternative Forced Choice (2AFC) psychophysics experiment:
     Participant will hear two sounds (one centered, one shifted by an angle).
