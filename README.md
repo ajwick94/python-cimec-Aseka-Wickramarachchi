@@ -8,14 +8,14 @@ This is a simple experiment that mimics auditory perception research methods use
 
 For normal-hearing listeners (NH), the ability of sound localisation is dependent on binaural cues, such as interaural time differences (ITDs; the difference in arrival timing of the sound signal at each ear) and interaural level differences (ILDs; the difference between the sound pressure levels at each ear). 
 
-*ITD (Interaural Time Difference):
-Time difference in arrival of a sound at each ear, strongest cue for localization at low frequencies.
+* ITD (Interaural Time Difference):
+    Time difference in arrival of a sound at each ear, strongest cue for localization at low frequencies.
 
-*ILD (Interaural Level Difference):
-Difference in sound level between ears, stronger cue at high frequencies.
+* ILD (Interaural Level Difference):
+    Difference in sound level between ears, stronger cue at high frequencies.
 
-*JND (Just Noticeable Difference):
-The smallest change in ITD that a listener can reliably detect.
+* JND (Just Noticeable Difference):
+    The smallest change in ITD that a listener can reliably detect.
 
 Here I have presented a framework for exploring these psychoacoustic phenomena experimentally with the use of a simple ITD manipulation.
 
@@ -23,13 +23,13 @@ Here I have presented a framework for exploring these psychoacoustic phenomena e
 
 #generate_ITD.py - class
 
-*Implements a psychoacoustic model (Woodworth’s ITD model) with fractional delay processing to spatialize audio over headphones.
+* Implements a psychoacoustic model (Woodworth’s ITD model) with fractional delay processing to spatialize audio over headphones.
 
-*Simulates ITDs based on average head radius and speed of sound. 
+* Simulates ITDs based on average head radius and speed of sound. 
 
-*Applies simple ILDs to mimic natural level differences between ears.
+* Applies simple ILDs to mimic natural level differences between ears.
 
-*Can generate and play test tones or save stereo signals as WAV files.
+* Can generate and play test tones or save stereo signals as WAV files.
 
 #jnd_experiment.py - class
 
