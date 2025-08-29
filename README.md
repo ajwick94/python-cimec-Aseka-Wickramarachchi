@@ -2,7 +2,18 @@
 
 This project simulates sound localization cues using Interaural Time Difference (ITD) and a simple Interaural Level Difference (ILD) model. It also implements a Just Noticeable Difference (JND) experiment to measure a listener’s sensitivity to spatial audio cues in the horizontal plane. Using plotting functions, participant performance in each trial is updated.
 
-This is a simple experiment that mimics auditory perception research methods used to measure accuracy in sound localisation and spatial hearing. The idea behind this project was to primarily familiarise myself in building a simple localisation experiment using Python while being able to combing knowdledge from psychoacoustics and digital signal processing. 
+This is a simple experiment that mimics auditory perception research methods used to measure accuracy in sound localisation and spatial hearing. The idea behind this project was to primarily familiarise myself in building a simple localisation experiment using Python while being able to combing knowdledge from psychoacoustics and digital signal processing.
+
+🧠 Background
+ITD (Interaural Time Difference):
+Time difference in arrival of a sound at each ear, strongest cue for localization at low frequencies.
+
+ILD (Interaural Level Difference):
+Difference in sound level between ears, stronger cue at high frequencies.
+
+JND (Just Noticeable Difference):
+The smallest change in ITD that a listener can reliably detect.
+Here I have presented a simple framework for exploring these psychoacoustic phenomena experimentally.
 
 📖 Overview
 
@@ -29,5 +40,7 @@ pip install numpy scipy matplotlib sounddevice
 ⚠️ Note:
 A working sound output device (headphones are much recommended 🎧) is required.
 sounddevice may require additional backend libraries depending on your OS.
+
+
 
 
