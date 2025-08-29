@@ -46,7 +46,7 @@ A working sound output device (headphones are much recommended 🎧) is required
 
 💭 Possible Future Implementations:
 
-* Adding of head-related transfer functions (HRTFs) with datasets containing acoustically measured or numerically simulated HRTFs for specific individuals (individualised HRTFs) or standardized models (generic HRTFs) which are used to simulate spatial audio experiences by filtering sound based on a listener's unique head and ear geometry. (Eg: SONICOM Dataset)
+* Addition of head-related transfer functions (HRTFs) with datasets containing acoustically measured or numerically simulated HRTFs for specific individuals (individualised HRTFs) or standardized models (generic HRTFs) which are used to simulate spatial audio experiences by filtering sound based on a listener's unique head and ear geometry. (Eg: SONICOM Dataset)
   
 * GUI for running perceptual tests, possible implementation with psychopy.
   
